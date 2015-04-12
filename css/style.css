@@ -1,0 +1,88 @@
+body
+{
+	background:#F0F0F0;
+	font-family:arial;
+}
+
+.container
+{
+	background-color : white;
+	box-shadow: 0 3px 20px rgba(100, 0, 0, 0.25);
+	height:auto;
+}
+
+.login-pass , .login-email
+{
+	margin-left : 20px;
+}
+
+.sign-up
+{
+	margin-left : 10px;
+}
+
+#login
+{
+	margin : 20px 0px;
+}
+
+div.span3
+{
+	margin-top : 50px;
+}
+
+div.tabbable
+{
+	margin-top : 75px;
+}
+
+.back-button
+{
+	margin-left : 100px;
+}
+
+.logout
+{
+	margin-right : 20px;
+}
+
+#reg_unsuccess , #reg_success , #pass_unsuccess , #pass_success,#login_banned,#login_unsuccess
+{
+	float : left;
+	clear : both;
+	display:none;
+	color : red;
+}
+
+.myTable 
+{
+	display: table;
+	border: 1px solid black;
+	width : 95%;
+}
+
+.myTable > * 
+{
+	display: table-cell;
+	width: 25%;
+}
+
+.update_user_level
+{
+	margin-top : 20px;
+}
+
+strong
+{
+	font-size : 16px;
+}
+
+.delete-btn
+{
+	margin-top : 25px;
+}
+
+select
+{
+	width : 33.3%;
+}

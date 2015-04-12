@@ -1,0 +1,91 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class pages extends CI_Controller {
+
+	public function index()
+	{
+		echo "vishal";	
+		//$this->view();	
+		//$this->home();
+		//$this->about();
+		//$this->database();
+		$this->insert();
+	}
+	
+	public function view()
+	{
+		echo "prasad";
+	}
+
+	public function addition()
+	{
+		$this->load->model("math");
+		echo $this->math->add(3,4);
+	}
+
+	public function home()
+	{
+		$data['title'] = "Home";
+		$data['var1'] = 2;
+		$data['var2'] = 5;
+		$this->load->model("math");
+		$data["add"] = $this->math->add($data['var1'],$data['var2']);
+		$this->load->view("view_home",$data);
+	}
+
+	public function about()
+	{
+		$data['title'] = "About";
+		$this->load->view("view_about",$data);
+	}
+
+	public function database()
+	{
+		$data['title'] = "Database";
+		$this->load->model("get_data");
+		$data["result"] =$this->get_data->get_all();
+		$this->load->view("view_data",$data);
+		echo "dfssd";
+	}
+
+	public function insert()
+	{
+		//$data['title'] = "Database";
+		$this->load->model("get_data");
+		$data = array( "name" => "ronak");
+		$this->get_data->insert1($data);
+		$this->database();
+		//echo "dfssd";
+	}
+
+	public function update()
+	{
+		//$data['title'] = "Database";
+		$this->load->model("get_data");
+		$data = array( "name" => "rohit");
+		$this->get_data->updating($data);
+		$this->database();
+		//echo "dfssd";
+	}
+
+	public function delete()
+	{
+		//$data['title'] = "Database";
+		$this->load->model("get_data");
+		$data = array( "name" => "rohit");
+		$this->get_data->deleting($data);
+		$this->database();
+		//echo "dfssd";
+	}
+
+	public function empty1()
+	{
+		//$data['title'] = "Database";
+		$this->load->model("get_data");
+		$data = "test";
+		$this->get_data->emptying($data);
+		//$this->database();
+		echo "dfssd";
+	}
+
+}
